@@ -2,13 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*A propriedade box-sizing nos permite incluir o preenchimento(padding) e a borda(border) na largura(width) e altura(height) total de um elemento*/
 }
 
 body {
     display: flex;
+    /*A propriedade flex, define como um ítem será posicionado para no espaço disponível dentro de seu container. Um container flex pode ser dispostos em qualquer direção, e pode "flexibilizar" seus tamanhos, crescendo para preencher o espaço vazio ou diminuindo para evitar o transbordamento do elemento.*/
     justify-content: center;
+    /*Define como o navegador distribui o espaço entre e ao redor dos itens de conteúdo ao longo do eixo principal de um container flex e o eixo embutido de um container de grid.*/
     align-items: center;
+    /*Estabelece o alinhamento de um certo item dentro do bloco que o contém*/
     min-height: 100vh;
+    /*vh = view height ou altura visivel*/
     background-color: rgb(37, 36, 36);
 }
 
@@ -18,14 +23,20 @@ body {
     place-items: center;
 }
 
+/*Alinhamento cental*/
+
 .card {
     width: 190px;
     height: 254px;
     background-color: rgba(211, 211, 211, 0.199);
     position: absolute;
+    /*Um elemento com posição: absoluta; é posicionado em relação ao ancestral posicionado mais próximo (em vez de posicionado em relação à viewport, como fixo). No entanto; se um elemento posicionado absoluto não tiver ancestrais posicionados, ele usará o corpo do documento e se moverá junto com a rolagem da página.*/
     transition: .3s ease-in-out;
+    /*Define uma transição de 0.3 segundos com uma função de aceleração suave*/
     cursor: pointer;
     box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.3);
+    /* offset-x | offset-y | blur-radius | spread-radius | color
+    Propriedade do CSS, é utilizado para adicionar efeitos de sombra em volta de um elemento.*/
 }
 
 .card img {
@@ -34,6 +45,7 @@ body {
 
 .main:hover #c1 {
     transform: translateX(-100px) rotate(-40deg);
+    /*A propriedade CSS transform permite modificar o espaço coordenado do modelo de formatação CSS. Usando-a, elementos podem ser traduzidos, rotacionados, ter seu tamanho ajustado e inclinados de acordo com os valores definidos*/
 }
 
 .main:hover #c2 {
